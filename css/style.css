@@ -294,6 +294,25 @@ a:focus {
           transform: none;
 }
 
+/* Centralizando a logo na versão mobile */
+@media (max-width: 991px) {
+  .navbar-brand {
+    text-align: center; /* Centraliza o texto dentro do elemento */
+    margin: 0 auto; /* Remove margens para centralizar */
+  }
+  
+  .navbar-toggler {
+    margin-left: auto; /* Alinha o botão de menu para a direita */
+  }
+}
+
+/* Ajuste da imagem da primeira seção */
+.hero_area {
+  background: url('images/sua_imagem.jpg') no-repeat center center; /* Substitua pelo caminho correto da imagem */
+  background-size: cover; /* Cobre a área sem distorcer a imagem */
+  min-height: 100vh; /* Altura mínima da área hero */
+}
+
 /*end header section*/
 /* slider section */
 .slider_section {
@@ -540,9 +559,11 @@ service_section {
 .about_section .detail-box a:hover {
   background-color: #065968;
 }
+
 .track_section {
   position: relative;
   color: #ffffff;
+  overflow: hidden; /* Para evitar que a imagem saia do container */
 }
 
 .track_section .track_bg_box {
@@ -556,10 +577,9 @@ service_section {
 }
 
 .track_section .track_bg_box img {
-  width: auto;
-  height: auto;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%; /* Ajusta a largura da imagem para 100% */
+  height: 100%; /* Ajusta a altura da imagem para 100% */
+  object-fit: cover; /* Cobre o contêiner sem distorcer a imagem */
 }
 
 .track_section .track_bg_box::before {
@@ -569,8 +589,7 @@ service_section {
   left: 0;
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(37, 37, 37, 0.95)), to(rgba(37, 37, 37, 0.55)));
-  background: linear-gradient(to right, rgba(37, 37, 37, 0.95), rgba(37, 37, 37, 0.55));
+  background: rgba(37, 37, 37, 0.7); /* Camada de cor para melhor contraste */
 }
 
 .track_section p {
@@ -580,60 +599,35 @@ service_section {
 }
 
 .track_section form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  align-items: stretch;
 }
 
 .track_section form input {
   background-color: #ffffff;
   border: none;
-  -webkit-box-flex: 2.5;
-      -ms-flex: 2.5;
-          flex: 2.5;
+  flex: 2.5;
   outline: none;
   color: #000000;
   min-height: 42.4px;
   padding-left: 15px;
 }
 
-.track_section form input ::-webkit-input-placeholder {
-  color: #ffffff;
-  opacity: 0.2;
-}
-
-.track_section form input :-ms-input-placeholder {
-  color: #ffffff;
-  opacity: 0.2;
-}
-
-.track_section form input ::-ms-input-placeholder {
-  color: #ffffff;
-  opacity: 0.2;
-}
-
-.track_section form input ::placeholder {
-  color: #ffffff;
-  opacity: 0.2;
+.track_section form input::placeholder {
+  color: #000000; /* Cor do placeholder ajustada para contraste */
+  opacity: 0.6; /* Opacidade do placeholder */
 }
 
 .track_section form button {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   display: inline-block;
   padding: 9px 30px;
   background-color: #FD6801;
   color: #ffffff;
-  border-radius: 0;
-  -webkit-transition: all .3s;
-  transition: all .3s;
   border: none;
   font-size: 15px;
   text-transform: uppercase;
+  transition: background-color .3s;
 }
 
 .track_section form button:hover {
@@ -997,18 +991,6 @@ service_section {
   width: auto;
 }
 
-/* Responsividade para telas menores */
-@media (max-width: 991px) {
-  .navbar-nav .nav-link {
-    font-size: 16px; /* Tamanho de fonte um pouco menor para telas menores */
-    padding: 8px 12px; /* Padding um pouco menor para telas menores */
-  }
-  
-  .logo-img {
-    max-height: 50px; /* Logo um pouco menor para telas menores */
-  }
-}
-
 .brands_section {
   background-color: #ffffff;
   padding: 60px 0;
@@ -1112,75 +1094,44 @@ service_section {
 
 @media (max-width: 991px) {
   .navbar {
-    height: 60px; /* Altura menor para dispositivos móveis, se necessário */
+    height: 80px; /* Altura menor para dispositivos móveis, se necessário */
+    padding-right: 80px;
   }
 
 
   .hero_area {
-    padding-top: 60px; /* Ajuste correspondente */
+    padding-top: 100px; /* Ajuste correspondente */
   }
 
   .slider_section {
-    height: calc(100vh - 60px); /* Ajuste correspondente */
+    height: 100%;
   }
 }
-
-
 .portfolio_section {
-  background-color: #f8f9fa;
-  padding: 90px 0;
+  background-color: #010101;
+  padding: 90px 0; /* Espaçamento superior e inferior */
 }
 
-.portfolio-slider {
-  display: flex; /* Usando Flexbox para alinhar as imagens */
-  justify-content: center; /* Centraliza as imagens horizontalmente */
-  align-items: center; /* Alinha verticalmente no centro */
-  flex-wrap: nowrap; /* Assegura que as marcas não se movam para a próxima linha */
+.container {
+  max-width: 1200px; /* Aumente a largura máxima do container */
+  margin: 0 auto; /* Centraliza o container na página */
 }
 
-.portfolio-item {
-  position: relative;
-  margin: 15px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  width: 300px; /* Defina uma largura fixa */
-  height: 300px; /* Defina uma altura fixa para manter o formato quadrado */
-}
-
-.portfolio-item img {
+.carousel-inner img {
   width: 100%; /* Faz a imagem ocupar toda a largura do contêiner */
-  height: 100%; /* Faz a imagem ocupar toda a altura do contêiner */
+  height: auto; /* Mantém a proporção da imagem */
+  max-height: 600px; /* Limite a altura máxima das imagens */
   object-fit: cover; /* Cobre o contêiner sem esticar a imagem */
+  transition: transform 0.5s ease; /* Transição suave para as imagens */
 }
 
-.portfolio-info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 20px;
-  transform: translateY(100%);
-  transition: transform 0.3s ease-in-out;
+.carousel-item {
+  transition: opacity 0.5s ease; /* Transição suave de opacidade */
 }
 
-.portfolio-item:hover .portfolio-info {
-  transform: translateY(0);
+.carousel-item-next, .carousel-item-prev, .carousel-item.active {
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Suaviza as transições */
 }
-
-.portfolio-info h4 {
-  color: #FD6801;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-.portfolio-info p {
-  margin: 0;
-  font-size: 14px;
-}
-
 .slick-dots {
   bottom: -40px;
 }
