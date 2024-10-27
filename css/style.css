@@ -1056,3 +1056,15 @@ a:focus {
     margin-top: 30px;
   }
 }
+
+.slider_section .container {
+  position: relative;
+  z-index: 1;
+  padding-top: 70px; /* Ajuste este valor de acordo com a altura da sua navbar */
+}
+
+@media (max-width: 991px) {
+  .slider_section .container {
+    padding-top: 50px; /* Valor menor para telas menores */
+  }
+}

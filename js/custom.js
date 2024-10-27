@@ -151,3 +151,18 @@ document.addEventListener('DOMContentLoaded', function() {
   handleActiveMenuItem();
   initBrandsSlider();
 });
+
+// Fechar o menu mobile ao clicar em um item
+document.addEventListener('DOMContentLoaded', function() {
+  var navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+  var navbarCollapse = document.querySelector('.navbar-collapse');
+  var bsCollapse = new bootstrap.Collapse(navbarCollapse, {toggle: false});
+
+  navLinks.forEach(function(navLink) {
+    navLink.addEventListener('click', function() {
+      if (window.innerWidth < 992) {
+        bsCollapse.hide();
+      }
+    });
+  });
+});
