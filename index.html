@@ -20,7 +20,9 @@
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 
   <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
 
   <!--owl slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
@@ -33,6 +35,9 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
 </head>
 
 <body>
@@ -40,76 +45,41 @@
   <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
-      <div class="header_top">
-        <div class="container-fluid ">
-          <div class="contact_nav">
-            <a href="">
-              <i class="fa fa-phone" aria-hidden="true"></i>
-              <span>
-                Call : +01 123455678990
-              </span>
-            </a>
-            <a href="">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-              <span>
-                Email : demo@gmail.com
-              </span>
-            </a>
-            <a href="">
-              <i class="fa fa-map-marker" aria-hidden="true"></i>
-              <span>
-                Location
-              </span>
-            </a>
+      <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #010101;">
+        <div class="container">
+          <a class="navbar-brand" href="#home">
+            <img src="images/Logo_ALL_Locações_02.png" alt="ALL Locações" class="logo-img">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">Quem Somos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services">Informações</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#portfolio">Portfólio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contato</a>
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
-      <div class="header_bottom">
-        <div class="container-fluid">
-          <nav class="navbar navbar-expand-lg custom_nav-container ">
-            <a class="navbar-brand" href="index.html">
-              <span>
-                Carint
-              </span>
-            </a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class=""> </span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav  ">
-                <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="service.html">Services</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="about.html"> About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact Us</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
-                </li>
-                <form class="form-inline">
-                  <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                  </button>
-                </form>
-              </ul>
-            </div>
-          </nav>
-        </div>
-      </div>
+      </nav>
     </header>
     <!-- end header section -->
     <!-- slider section -->
-    <section class="slider_section ">
+    <section id="home" class="slider_section">
       <div class="slider_bg_box">
-        <img src="images/slider-bg.jpg" alt="">
+        <img src="images/DUOL_RED.jpg" alt="">
       </div>
       <div id="customCarousel1" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -191,10 +161,68 @@
     <!-- end slider section -->
   </div>
 
+  <!-- about section -->
 
+  <section id="about" class="about_section layout_padding-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>Quem <span>somos?</span></h2>
+            </div>
+            <p>
+              A ALL Locadora nasceu do sonho de dois jovens visionários, Iara Chaves e
+              Fernando Cruz. Sem experiência e recursos, mas com uma vontade imensa de
+              vencer, eles decidiram agarrar a oportunidade que surgia à sua frente.
+              Começaram com um único caminhão, que eles mesmos dirigiam, e, com
+              muito esforço, começaram a trilhar um caminho de crescimento.
+            </p>
+            <p>
+              Ao longo dos anos, a empresa se destacou no setor de construção civil,
+              terraplanagem e asfalto, permitindo a aquisição de novos equipamentos e a
+              expansão do negócio. Hoje, a ALL Locadora é referência na locação de
+              máquinas pesadas, oferecendo uma frota moderna e em constante
+              aprimoramento.
+            </p>
+            <p>
+              Com uma estrutura sólida e um compromisso constante com a excelência,
+              estamos prontos para expandir nossas operações e atender novas áreas,
+              sempre mantendo o mesmo espírito de inovação e determinação que nos
+              trouxe até aqui.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="images/SOBRE_RED.jpg" alt="Sobre a ALL Locadora">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+<!-- brands section -->
+<section id="brands" class="brands_section layout_padding">
+  <div class="container">
+    <div class="heading_container heading_center">
+      <h2>Nossos <span>Parceiros</span></h2>
+    </div>
+    <div class="brands-slider">
+      <div><img src="images/brand1.png" alt="Brand 1"></div>
+      <div><img src="images/brand2.png" alt="Brand 2"></div>
+      <div><img src="images/brand3.png" alt="Brand 3"></div>
+      <div><img src="images/brand4.png" alt="Brand 4"></div>
+      <div><img src="images/brand5.png" alt="Brand 5"></div>
+      <div><img src="images/brand6.png" alt="Brand 6"></div>
+      <div><img src="images/brand7.png" alt="Brand 7"></div>
+    </div>
+  </div>
+</section>
   <!-- service section -->
 
-  <section class="service_section layout_padding">
+  <section id="services" class="service_section layout_padding">
     <div class="service_container">
       <div class="container ">
         <div class="heading_container">
@@ -292,43 +320,6 @@
   </section>
 
   <!-- end service section -->
-
-
-  <!-- about section -->
-
-  <section class="about_section layout_padding-bottom">
-    <div class="container  ">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2>
-                About <span>Us</span>
-              </h2>
-            </div>
-            <p>
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-              the middle of text. All
-            </p>
-            <a href="">
-              Read More
-            </a>
-          </div>
-        </div>
-        <div class="col-md-6 ">
-          <div class="img-box">
-            <img src="images/about-img.jpg" alt="">
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- end about section -->
-
   <!-- track section -->
 
   <section class="track_section layout_padding">
@@ -469,7 +460,7 @@
   <!-- end client section -->
 
   <!-- contact section -->
-  <section class="contact_section">
+  <section id="contact" class="contact_section">
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-4 col-md-5 offset-md-1">
@@ -614,16 +605,6 @@
 
   <!-- end info section -->
 
-  <!-- footer section -->
-  <section class="footer_section">
-    <div class="container">
-      <p>
-        &copy; <span id="displayYear"></span> All Rights Reserved By
-        <a href="https://html.design/">Free Html Templates</a>
-      </p>
-    </div>
-  </section>
-  <!-- footer section -->
 
   <!-- jQery -->
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
@@ -641,6 +622,33 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
   </script>
   <!-- End Google Map -->
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $('.brands-slider').slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      arrows: false,
+      dots: false,
+      pauseOnHover: false,
+      responsive: [{
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3
+        }
+      }, {
+        breakpoint: 520,
+        settings: {
+          slidesToShow: 2
+        }
+      }]
+    });
+  });
+  </script>
 
 </body>
 
